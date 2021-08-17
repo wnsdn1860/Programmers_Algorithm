@@ -76,8 +76,12 @@ public class algokakao01_01 {
             }
             if(arr[j]-'0' >= 0 && arr[j]-'0' <=9) {
             	if(idx == 2) continue;
-            	if(arr[j]-'0' == 1 && arr[j+1]-'0' == 0) result[++idx] = 10;
+            	if(arr[j]-'0' == 1 && arr[j+1]-'0' == 0){
+            		result[++idx] = 10;
+            		j++;
+            	}
             	else {
+            		
             	result[++idx] = arr[j]-'0';
             	}
             }
@@ -89,8 +93,8 @@ public class algokakao01_01 {
 	} 
 	public static void main(String[] args) {
 		algokakao01_01 algo = new algokakao01_01();
-		int result = algo.solution("1S2D*3T");
-		if(result == 37) System.out.println("맞았습니다.");
+		int result = algo.solution("10D10T*10S");
+		if(result == 2210) System.out.println("맞았습니다.");
 
 	}
 
