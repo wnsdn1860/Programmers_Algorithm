@@ -34,10 +34,10 @@ public class algo1_32 {
         	list.add(d[i]);
         }
         Collections.sort(list);        
-        long budg = budget;
+        
         for(int a : list) {
         	sum += a;        	
-        	if(sum > budg) {
+        	if(sum > budget) {
         		break;
         	}
         	cnt++;
